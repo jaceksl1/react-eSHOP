@@ -22,6 +22,7 @@
 }
 
 .header__logoTitle {
+    display: none;
     text-decoration: none;
     border: 0;
     color: white;
@@ -79,4 +80,10 @@
     color: white;
     margin-right: 10px;
     margin-left: 10px;
+}
+
+@media screen and (min-width: 760px) {
+    .header__logoTitle {
+        display: block;
+    }
 }

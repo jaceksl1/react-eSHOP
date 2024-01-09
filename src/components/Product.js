@@ -9,7 +9,7 @@ const Product = ({id, price, rating, image, description}) => {
             <div className="product__info">
                   <p className='title'>Laptop</p>
                   <p className='description'>{description}</p>
-                  <p className='product__price'>{price}</p>
+                  <p className='product__price'>{price}zł</p>
                   <div className="product__rating">
                       <StarIcon />
                       <StarIcon />
