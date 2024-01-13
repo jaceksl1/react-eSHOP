@@ -2,20 +2,20 @@ import React from 'react'
 import StarIcon from '@mui/icons-material/Star';
 import './Product.css';
 
-const Product = ({id, price, rating, image, description}) => {
+const Product = ({id, price, rating, image, description, title}) => {
   return (
     <div>
         <div className="product">
             <div className="product__info">
-                  <p className='title'>Laptop</p>
+                  <p className='title'>{title}</p>
                   <p className='description'>{description}</p>
                   <p className='product__price'>{price}zł</p>
                   <div className="product__rating">
-                      <StarIcon />
-                      <StarIcon />
-                      <StarIcon />
-                      <StarIcon />
-                      <StarIcon />
+                      {Array(rating)
+                      .fill()
+                      .map((_,i) => (
+                        <p><StarIcon /></p>
+                      ))}
                   </div>
                 </div>
               <img className="product__image" src={image} alt="product" />

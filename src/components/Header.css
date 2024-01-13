@@ -1,19 +1,25 @@
 .header {
+    background-color: #131921;
+}
+
+.header-nav {
     height: 60px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #131921;
     position: sticky;
     top: 0;
     z-index: 100;
+    max-width: 1440px;
+    padding: 0 30px;
+    margin: auto;
 }
 
 .header__logo {
     display: flex;
     align-items: center;
     color: #ff9f00;
-    margin: 0 25px;
+    margin: 0 25px 0 0;
     cursor: pointer;
 }
 
