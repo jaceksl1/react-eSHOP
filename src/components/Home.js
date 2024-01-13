@@ -4,7 +4,7 @@ import Product from './Product';
 
 export const Home = () => {
   return (
-    <div>
+    <React.Fragment>
         <div className="home">
             <div className="home__container">
                 <div className="home__row">
@@ -75,7 +75,7 @@ export const Home = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </React.Fragment>
   )
 }
 
