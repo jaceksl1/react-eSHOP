@@ -13,6 +13,7 @@ const Checkout = () => {
             <div className="checkout-wrapper">
                 <div className="checkout__left">
                     <CheckoutProduct/>
+                    <CheckoutProduct/>
                 </div>
                 <div className="checkout__right">
                     <Subtotal/>
