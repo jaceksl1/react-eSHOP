@@ -2,18 +2,31 @@ import React from 'react';
 import './Checkout.css';
 import CheckoutProduct from './CheckoutProduct';
 import Subtotal from './Subtotal';
+import {useStateValue} from './StateProvider';
 
 const Checkout = () => {
-  return (
+
+    const [{basket}] = useStateValue();
+
+    return (
     <React.Fragment>
         <div className="checkout">
             <h2 className="checkout__title">
-                Your Shopping Basket
+                Your Cart
             </h2>
             <div className="checkout-wrapper">
                 <div className="checkout__left">
-                    <CheckoutProduct/>
-                    <CheckoutProduct/>
+                    {basket.map(item=> (
+                       <CheckoutProduct 
+                            id = {item.id}
+                            title = {item.title}
+                            image = {item.image}
+                            price = {item.price}
+                            description = {item.description}
+                            rating = {item.rating}
+                            key={item.id}
+                       /> 
+                    ))}
                 </div>
                 <div className="checkout__right">
                     <Subtotal/>

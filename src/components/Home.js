@@ -10,7 +10,7 @@ export const Home = () => {
                 <div className="home__row">
                     <Product 
                         title="Chromebook"
-                        id="1"
+                        id={1}
                         price={1999}
                         rating={5}
                         image="./content/laptop1.png"
@@ -18,7 +18,7 @@ export const Home = () => {
                     />
                     <Product 
                         title="Light Laptop"
-                        id="2"
+                        id={2}
                         price={2999}
                         rating={4}
                         image="./content/laptop2.png"
@@ -26,7 +26,7 @@ export const Home = () => {
                     />
                     <Product
                         title="School Laptop"
-                        id="3"
+                        id={3}
                         price={2499}
                         rating={3}
                         image="./content/laptop3.png" 
@@ -34,7 +34,7 @@ export const Home = () => {
                     />
                     <Product 
                         title="Light Laptop"
-                        id="4"
+                        id={4}
                         price={2499}
                         rating={5}
                         image="./content/laptop2.png" 
@@ -42,7 +42,7 @@ export const Home = () => {
                     />
                     <Product 
                         title="School Laptop"
-                        id="5"
+                        id={5}
                         price={2499}
                         rating={2}
                         image="./content/laptop1.png" 
@@ -50,7 +50,7 @@ export const Home = () => {
                     />
                     <Product 
                         title="School Laptop"
-                        id="6"
+                        id={6}
                         price={1499}
                         rating={3}
                         image="./content/laptop3.png" 
@@ -58,7 +58,7 @@ export const Home = () => {
                     />
                     <Product 
                         title="Laptop"
-                        id="7"
+                        id={7}
                         price={4499}
                         rating={5}
                         image="./content/laptop1.png" 
@@ -66,7 +66,7 @@ export const Home = () => {
                     />
                     <Product 
                         title="Gaming Laptop"
-                        id="8"
+                        id={8}
                         price={8499}
                         rating={5}
                         image="./content/laptop1.png" 

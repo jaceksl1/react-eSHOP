@@ -1,23 +1,38 @@
 import React from 'react'
 import './CheckoutProduct.css'
 import StarIcon from '@mui/icons-material/Star';
+import { useStateValue } from './StateProvider';
 
-const CheckoutProduct = () => {
+const CheckoutProduct = ({id, image, price, rating, description, title}) => {
+// eslint-disable-next-line 
+  const [{basket}, dispatch] = useStateValue();
+  const removeFromBasket = () => {
+      dispatch({
+        type: "REMOVE_FROM_BASKET",
+        item: {
+          id: id,
+        }
+      })
+  }
   return (
     <React.Fragment>
       <div className='checkoutProduct__wrapper'>
-        <div className="checkoutProduct">
-          <img className="checkoutProduct__image" src='./content/laptop1.png' alt="product" />
+        <div className="checkoutProduct" id={id}>
+          <img className="checkoutProduct__image" src={image} alt="product" />
             <div className="checkoutProduct__info">
-              <p className='title'>Chromebook</p>
-              <p className='description'>"Unleash creativity with our high-performance laptops. From graphic design to gaming, power meets precision for a seamless experience. Elevate your work and play today!</p>
-              <p className='checkoutProduct__price'>2000zł</p>
+              <p className='title'>{title}</p>
+              <p className='description'>{description}</p>
+              <p className='checkoutProduct__price'>{price}zł</p>
               <div className="checkoutProduct__rating">
-              <StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarIcon />
+                  {Array(rating)
+                    .fill()
+                    .map((_,i) => (
+                      <p key={i}><StarIcon /></p>
+                  ))}
               </div>
             </div>
         </div>
-        <button>Remove from basket</button>
+        <button onClick={removeFromBasket}>Remove from basket</button>
       </div>  
     </React.Fragment>
   )

@@ -5,7 +5,7 @@ import { useStateValue } from './StateProvider';
 
 const Product = ({id, price, rating, image, description, title}) => {
 
-  const [{},dispatch] = useStateValue();
+  const [{state},dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
@@ -25,19 +25,19 @@ const Product = ({id, price, rating, image, description, title}) => {
     <React.Fragment>
       <div className="product">
           <div className="product__info">
-                <p className='title'>{title}</p>
-                <p className='description'>{description}</p>
-                <p className='product__price'>{price}zł</p>
-                <div className="product__rating">
-                    {Array(rating)
-                    .fill()
-                    .map((_,i) => (
-                      <p><StarIcon /></p>
-                    ))}
-                </div>
-              </div>
-            <img className="product__image" src={image} alt="product" />
-            <button onClick={addToBasket}>Add to basket</button>
+            <p className='title'>{title}</p>
+            <p className='description'>{description}</p>
+            <p className='product__price' key={id}>{price}zł</p>
+            <div className="product__rating">
+                {Array(rating)
+                .fill()
+                .map((_,i) => (
+                  <p key={i}><StarIcon/></p>
+                ))}
+            </div>
+          </div>
+          <img className="product__image" src={image} alt="product" />
+          <button onClick={addToBasket}>Add to basket</button>
       </div>
     </React.Fragment>
   )
