@@ -3,10 +3,10 @@ Simple eShop build with React.
 ![image](https://github.com/jaceksl1/react-eSHOP/assets/87030915/95585093-2d73-4b32-917e-30711eb8d5f5)
 
 
-#Products created with props
-#Array
-#Maps
-#Reducer with functions like AddToBasket and RemoveFromBasket
-#StateProvider
-#Countng totals in the cart
-#Showing items count in the cart on header
+1.Products created with props
+2.Arrays
+3.Maps
+4.Reducer with functions like AddToBasket and RemoveFromBasket
+5.StateProvider
+6.Countng totals in the cart
+7,Showing items count in the cart on header
